@@ -16,11 +16,18 @@ public class MultiplicacionEgipcia implements Multiplicacion {
         return tupla[0];
     }
     private BigInteger[] MultiplicacionEgipcia(BigInteger n, BigInteger m, BigInteger doble1) {
-        BigInteger[] tupla=new BigInteger[]{new BigInteger("0"),new BigInteger("0")};
+        BigInteger[] tupla=null;
         if(doble1.compareTo(m)==1)
-            return tupla;
+            return new BigInteger[]{new BigInteger("0"),new BigInteger("0")};
         if(doble1.compareTo(m)<=0){
-            
+            tupla[0]=MultiplicacionEgipcia(n, m, doble1.multiply(new BigInteger("2")))[0];
+            if(tupla[1].subtract(doble1).compareTo(m)<=0){
+                tupla[0]=tupla[0].subtract(n.multiply(doble1));
+                tupla[1]=tupla[1].subtract(doble1);
+                return tupla;
+            }else{
+                return tupla;
+            }
         }
         return tupla;
     }
