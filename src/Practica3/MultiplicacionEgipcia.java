@@ -21,9 +21,9 @@ public class MultiplicacionEgipcia implements Multiplicacion {
             return new BigInteger[]{new BigInteger("0"),new BigInteger("0")};
         if(doble1.compareTo(m)<=0){
             tupla[0]=MultiplicacionEgipcia(n, m, doble1.multiply(new BigInteger("2")))[0];
-            if(tupla[1].subtract(doble1).compareTo(m)<=0){
-                tupla[0]=tupla[0].subtract(n.multiply(doble1));
-                tupla[1]=tupla[1].subtract(doble1);
+            if(tupla[1].add(doble1).compareTo(m)<=0){
+                tupla[0]=tupla[0].add(n.multiply(doble1));
+                tupla[1]=tupla[1].add(doble1);
                 return tupla;
             }else{
                 return tupla;
