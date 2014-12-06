@@ -12,6 +12,11 @@ public class MultiplicacionSumasSucesivas implements Multiplicacion {
 
     @Override
     public BigInteger multiplica(BigInteger n, BigInteger m) {
+        BigInteger multiplicacionSumasSucesivas=multiplicacionSumasSucesivas(n,m);
+        return multiplicacionSumasSucesivas;
+    }
+
+    private BigInteger multiplicacionSumasSucesivas(BigInteger n, BigInteger m) {
         if (n.compareTo(BigInteger.ONE)==1)
             return m.add(multiplica(n.subtract(BigInteger.ONE), m));
         else if (n.compareTo(BigInteger.ZERO)==0)

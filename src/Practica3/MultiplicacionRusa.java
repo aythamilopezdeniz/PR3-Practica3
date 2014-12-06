@@ -12,6 +12,11 @@ public class MultiplicacionRusa implements Multiplicacion {
 
     @Override
     public BigInteger multiplica(BigInteger n, BigInteger m) {
+        BigInteger multiplicacionRusa=multiplicacionRusa(n, m);
+        return multiplicacionRusa;
+    }
+    
+    public BigInteger multiplicacionRusa(BigInteger n, BigInteger m){
         BigInteger[] tupla=new BigInteger[2];
         if(n.compareTo(new BigInteger("1"))>=0){
             if (n.mod(new BigInteger("2"))!=BigInteger.ZERO){
