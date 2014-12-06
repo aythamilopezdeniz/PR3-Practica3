@@ -25,9 +25,8 @@ public class MultiplicacionEgipcia implements Multiplicacion {
                 tupla[0]=tupla[0].add(n.multiply(doble1));
                 tupla[1]=tupla[1].add(doble1);
                 return tupla;
-            }else{
+            }else
                 return tupla;
-            }
         }
         return tupla;
     }
